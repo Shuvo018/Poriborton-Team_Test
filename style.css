@@ -1,0 +1,714 @@
+
+@import url('https://fonts.maateen.me/siyam-rupali/font.css');
+@import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+
+}
+header{
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(
+        to bottom, 
+        #2d73b9, #030921
+      )
+   
+}
+header .logo{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    top: 2%;
+    left: 2%;
+}
+header .logo svg path{
+    width: 100%;
+    height: 100%;
+    animation: fill .5s ease;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes fill{
+    0%{
+        fill:#fff;
+       
+        
+    }
+    100%{
+        
+        
+        fill: #fff;
+    }
+}
+/* ------navigation menu start-------- */
+
+header nav{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    width: 65%;
+    z-index: 9999;
+}
+header nav{
+    float: right;
+
+}
+
+header nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+}
+header nav ul li .sub_menu{
+    font-family: 'AdorshoLipi', sans-serif;
+    height: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+header nav ul li .sub_menu::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 22px;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+header nav ul li .sub_menu:hover::after{
+    opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+header nav ul li .sub_menu:hover{
+    color: cyan;
+    letter-spacing: 2px;
+}
+header nav ul li .sub_menu::before{
+    content: "\f0d7"; 
+    font-family: "Font Awesome 5 Free";
+   position: absolute;
+   font-weight: 900;
+   line-height: 50px;
+   color: #fff;
+   right: 5px;
+   
+}
+header nav ul li.active .sub_menu::before{
+    content: "\f0de";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+ }
+
+header nav ul li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    font-family: 'AdorshoLipi', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: all .5s ease;
+}
+header nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 22px;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+header nav ul li a:hover::after{
+    opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    
+}
+header nav ul li a:hover{
+    color: cyan;
+    letter-spacing: 2px;
+}
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    background: #030921;
+    display: none;
+}
+header nav ul li.active ul{
+    display: block;
+}
+header nav ul li ul li{
+    display: block;
+    width: 250px;
+    
+}
+header .menu_toggle{
+    position: absolute;
+    color: #030921;
+    top: 1%;
+    right: 5%;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    
+}
+@media (max-width: 991px){
+    header nav{
+        padding: 0 20px;
+
+    }
+    header .menu_toggle{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #030921;
+        top: 50px;
+        left: -100%;
+        transition: all .5s;
+        
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li.active ul{
+        position: relative;
+        
+    }
+    header nav ul li ul li{
+        width: 100%;
+        text-align: end;
+        
+    }
+
+}
+/* ------navigation menu end-------- */
+header .body_style .body_style_text1{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: end;
+    color: #fff;
+    z-index: 1000;
+    font-family: 'SiyamRupali', sans-serif;
+    
+}
+
+header .body_style .body_style_text2{
+    
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    transform: translate(-50%, 50%);
+    font-size: 16px;
+    text-align: end;
+    color: #fff;
+    z-index: 1000;
+    font-family: 'SiyamRupali', sans-serif;
+
+}
+
+header .body_style .body_style_imgTools{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    user-select: none;
+}
+header .body_style .body_style_imgTools img{
+    width: 100%;
+    height: 100%;
+}
+
+header .body_style .body_side_style_img{
+    
+   /* position: absolute; */
+
+}
+header .body_style .body_side_style_img .side_style_1{
+    
+    position: absolute;
+    width: 200px;
+    height: 350px;
+    top: 25%;
+    left: 0;
+    z-index: 0;
+    user-select: none;
+    animation: side_style_1 0.5s linear;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+ }
+ @keyframes side_style_1{
+     0%{
+         visibility: visible;
+         left: -100px;
+     }
+     100%{
+        visibility: visible;
+        left: 0px;
+    }
+ }
+
+ header .body_style .body_side_style_img .side_style_3{
+    
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    top: 40%;
+    right: 0;
+    user-select: none;
+    animation: side_style_3 0.5s linear;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+ }
+ @keyframes side_style_3{
+    0%{
+        visibility: visible;
+        width: 20px;
+        height: 30px;
+    }
+    100%{
+       visibility: visible;
+       width: 200px;
+       height: 300px;
+   }
+}
+
+main{
+   
+    
+    background-color: #030921;
+    
+}
+main .main_title_text h2{
+    
+    padding: 10px;
+    font-family: 'AdorshoLipi', sans-serif;
+    color: orange;
+    font-size: 34px;
+    text-align: center;
+   
+}
+main .upDate{
+    
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+main .upDate .upDate_image{
+    
+    width: 250px;
+    height: 300px;
+    margin-left: auto;
+    
+}
+main .upDate .upDate_image img{
+    
+    width: 100%;
+    height: 100%;
+
+
+}
+main .upDate .upDate_text{
+    font-family: 'AdorshoLipi', sans-serif;
+    font-size: 22px;
+    margin: 50px;
+    color: #fff;
+    
+}
+main .upDate .upDate_text a{
+    font-family: 'AdorshoLipi', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 23px;
+    transition:all .5s ease-out;
+    
+}
+main .upDate .upDate_text a:hover{
+
+    color: rgb(89, 153, 248);
+    border: 1px solid rgb(89, 153, 248);
+    letter-spacing: 2px;
+}
+main .teamUpDate{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+}
+main .teamUpDate .teamUpDate_image{
+    width: 200px;
+    height: 250px;
+    
+}
+main .teamUpDate .teamUpDate_image img{
+    width: 100%;
+    height: 100%;
+}
+main .teamUpDate .teamUpDate_text{
+    
+    
+    color: #fff;
+    width: 70%;
+    margin: 20px
+}
+main .teamUpDate .teamUpDate_text h2{
+    font-family: 'AdorshoLipi', sans-serif;
+    font-size: 34px;
+    color: orange;
+}
+main .teamUpDate .teamUpDate_text p{
+    font-family: 'AdorshoLipi', sans-serif;
+    white-space: pre-line;
+    font-size: 18px;
+    color: #fff;
+}
+main .allCards{
+    width: 80%;
+    margin: auto;
+    
+}
+main .allCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+   
+}
+main .allCards .card{
+    height: 300px;
+    width: 250px;
+    background-color: #ccc;
+    border-radius: 23px;
+    padding: 15px;
+    margin: 10px;
+}
+main .allCards .card .text{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+main .allCards .card .name_title{
+   width: 100%;
+   display: flex;
+   
+   
+}
+main .allCards .card .imgBox{
+    
+    margin-left: -10px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+main .allCards .card .imgBox img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+main .allCards .card .imgBox img:hover{
+    transition: all 0.5s ease-out;
+    transform: scale(1.5)
+}
+
+main .allCards .card .name_title .title{
+    
+    font-size: 14px;
+    margin: 0px;
+    padding: 15px 0 0 10px;
+}
+main .allCards .card .name_title .title p{
+    font-family: 'AdorshoLipi', sans-serif;
+    font-size: 14px;
+    color: #111;
+    
+}
+
+
+main .counterBox{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+
+    background: #111;
+    border-top: 2px solid #fff;
+    
+}
+main .counterBox .counterBox_text{
+    font-family: 'AdorshoLipi', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 24px;
+    padding: 34px;
+}
+main .counterBox .count{
+    padding: 34px;
+    color: #fff;
+    font-size: 24px;
+}
+
+footer{
+    background-color: #2c3e50;
+}
+footer .links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 12px;
+    
+}
+footer .links li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 12px;
+    font-size: 18px;
+}
+footer .links li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+footer .links li a i{
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+@media(max-width: 1240px){
+    body{
+        /* display: none; */
+    }
+    header .logo{
+        
+        width: 180px;
+        height: 46px;
+        
+    }
+    header nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 77%;
+        
+    }
+    header nav ul li .sub_menu{
+       
+        font-size: 15px;
+        padding: 0 14px;
+        
+    }
+    header nav ul li a{
+        
+        padding: 0 14px;
+        font-size: 15px;
+       
+    }
+  
+   
+    header .body_style .body_style_text2{
+    
+       
+        top: 30%;
+        right: -12%;
+        transform: translate(-50%, 50%);
+        font-size: 14px;
+    
+    
+    }
+}
+@media(max-width: 960px){
+    body{
+        /* display: none; */
+    }
+    header .body_style .body_style_text2{
+    
+       
+        top: 30%;
+        right: -18%;
+        transform: translate(-50%, 50%);
+        font-size: 14px;
+    
+    
+    }
+}
+@media(max-width: 768px)
+{
+    body{
+        /* display: none; */
+    }
+    header{
+        height: 90vh;
+        width: 100%;
+    }
+    header .logo{
+        
+        width: 180px;
+        height: 40px;
+        
+    }
+    header .body_style .body_style_text1{
+       
+        top: 25%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        text-align: end;
+      
+        z-index: 1000;
+        
+    }
+    
+    header .body_style .body_style_text2{
+       
+        top: 30%;
+        right: -16%;
+        transform: translate(-50%, 50%);
+        font-size: 8px;
+    
+    
+    }
+    header .body_style .body_style_imgTools{
+        width: 300px;
+        height: 300px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: .5;
+        user-select: none;
+    }
+    header .body_style .body_side_style_img .side_style_1{
+    
+        
+        width: 100px;
+        height: 150px;
+        
+        
+       
+     }
+     header .body_style .body_side_style_img .side_style_3{
+    
+       
+        width: 150px;
+        height: 200px;
+       
+        
+     }
+     main .main_title_text h2{
+    
+        padding: 10px;
+        font-family: 'AdorshoLipi', sans-serif;
+        color: orange;
+        font-size: 34px;
+        text-align: center;
+       
+    }
+     main .upDate{
+        
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    main .upDate .upDate_image{
+        
+        width: 250px;
+        height: 200px;
+        
+    }
+    main .upDate .upDate_text{
+       font-size: 18px;
+       margin: 10px 0 10px 5px;
+        
+    }
+    main .upDate .upDate_text a{
+       
+        font-size: 14px;
+        color: #fff;
+        margin-left: 28px;
+        
+    }
+    main .teamUpDate{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin:auto;
+    }
+    main .teamUpDate .teamUpDate_image{
+        width: 200px;
+        height: 250px;
+        /* margin-left: auto; */
+    }
+   main .teamUpDate .teamUpDate_text{
+    
+        /* font-size: 18px; */
+        color: #fff;
+        width: 65%;
+        margin: 10px
+    }
+    main .teamUpDate .teamUpDate_text h2{
+        font-size: 24px;
+    }
+    main .teamUpDate .teamUpDate_text p{
+        font-size: 16px;
+        
+    }
+    
+    
+}
