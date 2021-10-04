@@ -34,18 +34,13 @@ header .logo svg path{
     animation: fill .5s ease;
     animation-delay: 6s;
     animation-fill-mode: forwards;
+
 }
 @keyframes fill{
-    0%{
+    0%,100%{
         fill:#fff;
-       
-        
     }
-    100%{
-        
-        
-        fill: #fff;
-    }
+   
 }
 /* ------navigation menu start-------- */
 
@@ -216,7 +211,7 @@ header .menu_toggle{
     header nav ul li ul li{
         width: 100%;
         text-align: end;
-        
+        font-size: 28px;
     }
 
 }
@@ -320,8 +315,7 @@ header .body_style .body_side_style_img .side_style_1{
 }
 
 main{
-   
-    
+
     background-color: #030921;
     
 }
@@ -426,7 +420,7 @@ main .allCards{
    
 }
 main .allCards .card{
-    height: 300px;
+    /* height: 300px; */
     width: 250px;
     background-color: #ccc;
     border-radius: 23px;
@@ -480,11 +474,14 @@ main .allCards .card .name_title .title p{
 main .counterBox{
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 25%;
     text-align: center;
     margin: auto;
-
-    background: #111;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /* background: #111; */
     border-top: 2px solid #fff;
     
 }
@@ -594,7 +591,7 @@ footer .links li a i{
         /* display: none; */
     }
     header{
-        height: 90vh;
+        height: 85vh;
         width: 100%;
     }
     header .logo{
@@ -603,16 +600,21 @@ footer .links li a i{
         height: 40px;
         
     }
-    header .body_style .body_style_text1{
+    header nav ul li .sub_menu{
+        font-size: 18px;
+    }
+    header nav ul li a{
+        font-size: 18px;
        
+    }
+    header .body_style .body_style_text1{
+        position: absolute;
         top: 25%;
-        left: 20%;
+        left: 26%;
         transform: translate(-50%, -50%);
-        font-size: 14px;
+        font-size: 13px;
         text-align: end;
-      
         z-index: 1000;
-        
     }
     
     header .body_style .body_style_text2{
@@ -620,7 +622,7 @@ footer .links li a i{
         top: 30%;
         right: -16%;
         transform: translate(-50%, 50%);
-        font-size: 8px;
+        font-size: 10px;
     
     
     }
@@ -686,21 +688,21 @@ footer .links li a i{
     }
     main .teamUpDate{
         width: 100%;
-        display: flex;
-        justify-content: space-around;
+        display: inline-block;
         margin:auto;
     }
     main .teamUpDate .teamUpDate_image{
-        width: 200px;
-        height: 250px;
-        /* margin-left: auto; */
+        width: 180px;
+        height: 220px;
+        float: left;
     }
    main .teamUpDate .teamUpDate_text{
     
-        /* font-size: 18px; */
+       
         color: #fff;
-        width: 65%;
-        margin: 10px
+        width: 90%;
+        margin: 10px;
+        padding: 12px;
     }
     main .teamUpDate .teamUpDate_text h2{
         font-size: 24px;
@@ -709,6 +711,36 @@ footer .links li a i{
         font-size: 16px;
         
     }
+    
+main .counterBox{
+    display: flex;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    /* background: rgb(34, 41, 61); */
+    border-top: 2px solid #fff;
+    
+}
+main .counterBox .counterBox_text{
+    
+    color: #fff;
+    font-size: 24px;
+    padding: 14px;
+}
+main .counterBox .count{
+    padding: 34px;
+    color: #fff;
+    font-size: 24px;
+}
+footer .links{
+    display: inline-block;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+            
+        
+    }
+    
     
     
 }
