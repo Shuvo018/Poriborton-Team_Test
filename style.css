@@ -617,10 +617,10 @@ footer .links li a i{
         z-index: 1000;
     }
     
-    header .body_style .body_style_text2{
+  header .body_style .body_style_text2{
        
         top: 30%;
-        right: -16%;
+        right: -25%;
         transform: translate(-50%, 50%);
         font-size: 10px;
     
