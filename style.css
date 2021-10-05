@@ -620,7 +620,7 @@ footer .links li a i{
     header .body_style .body_style_text1{
         position: absolute;
         top: 25%;
-        left: 24%;
+        left: 25%;
         transform: translate(-50%, -50%);
         font-size: 13px;
         text-align: end;
@@ -680,7 +680,7 @@ footer .links li a i{
         padding: 10px;
         font-family: 'AdorshoLipi', sans-serif;
         color: orange;
-        font-size: 34px;
+        font-size: 25px;
         text-align: center;
        
     }
